@@ -4,7 +4,8 @@ import asyncio
 from keyboards import *
 from config import *
 
-API_TOKEN = ''
+#Telegramdan bot tokenini joylashtiramiz
+API_TOKEN = 'Your Bot Token'
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN,parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
@@ -108,7 +109,7 @@ async def search_movie(message:types.Message):
             await asyncio.sleep(2)
             await msg.edit_text("Ushbu film saytga hali toliq yuklanmagan! Noqulaylik uchun uzr!")
     else:
-        await message.answer("Agar botdan foydalanishni bilmayotfan bo'lsangiz /help ni bosing.")
+        await message.answer("Agar botdan foydalanishni bilmayotgan bo'lsangiz /help ni bosing.")
 
 
 
