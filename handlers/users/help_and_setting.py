@@ -8,4 +8,4 @@ async def help(message:Message):
     lat=config.Shops["lat"]
     lon=config.Shops["lon"]
     await message.answer_location(latitude=lat,longitude=lon)
-    await message.answer("Bot yaratuvchisi: @cpyjava +998883832907")
+    await message.answer("Bot yaratuvchisi: @pycyberuz +998883832907")
