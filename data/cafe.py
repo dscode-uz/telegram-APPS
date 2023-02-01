@@ -1,4 +1,5 @@
-Shops={"lat":39.652384,
-       "lon":66.961959,
-       "1km":5000
+from .config import DELIVERY,MAP
+Shops={"lat":float(MAP[0]),
+       "lon":float(MAP[1]),
+       "1km":int(DELIVERY)
        }
