@@ -23,12 +23,12 @@ async def admin_command(message:Message):
 
 @dp.message_handler(text="/clear_pr",user_id=ADMINS)
 async def admin_command(message:Message):
-    products_db.delete_products()
+    db.delete_products()
     await message.reply("OK")
 
 @dp.message_handler(text="/clear_ct",user_id=ADMINS)
 async def admin_command(message:Message):
-    categories_db.delete_categories()
+    db.delete_categories()
     await message.reply("OK")
 
 @dp.message_handler(text="/clear",user_id=ADMINS)

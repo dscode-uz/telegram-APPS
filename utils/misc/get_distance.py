@@ -1,7 +1,7 @@
 import math
 from aiogram import types
 
-from data.cafe import Shops
+from data.config import Shops
 
 def calc_distance(lat1, lon1, lat2, lon2):
     R = 6371000

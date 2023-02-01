@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandHelp
 from data.config import ADMINS
-from data import cafe
+from data import config
 from loader import dp
 
 
@@ -20,7 +20,7 @@ async def bot_help(message: types.Message):
 @dp.message_handler(CommandHelp())
 async def bot_help(message: types.Message):
     text = await message.answer("Bizning kafemiz manzili 👇")
-    lat=cafe.Shops["lat"]
-    lon=cafe.Shops["lon"]
+    lat=config.Shops["lat"]
+    lon=config.Shops["lon"]
     await message.answer_location(latitude=lat,longitude=lon)
     await message.answer("Bot yaratuvchisi: @pycyberuz +998883832907")
