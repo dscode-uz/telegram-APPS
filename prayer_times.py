@@ -1,3 +1,9 @@
+#PACKAGES NEED INSTALLING,(O'rnatilishi kerak bo'lgan papkalar)
+#aiogram=2.25.1
+#aiohttp
+
+#python-version=3.10, (python versiyasi 3.10)
+
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 import aiohttp
