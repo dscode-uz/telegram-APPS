@@ -17,11 +17,13 @@ except:
     pass
 
 #Foydalanuvchining kerakli ma'lumotlari. API ID va API HASH ni googledan qidirib ko'ring yoki
-senior_user_id=5688885462 #Profil egasi ID raqami
+senior_user_id=12345678 #Profil egasi ID raqami
 control_time=15 #Boshqaruv vaqtini belgilash (minutlarda)
-api_id = 25325009 #API ID
-api_hash = 'c2f1bb1712f5e8b0e4feb1b64047e36f' #API HASH
-app = Client("my_account", api_id, api_hash,phone_code="+998",phone_number="+998883832907") #mijoz kontrolleri
+api_id = 12345 #API ID
+api_hash = 'qwertyuiop' #API HASH
+phone_code="+998" #mamlakat kodi
+phone_number="+998919191999" #Telefon raqam
+app = Client("my_account", api_id, api_hash,phone_code=phone_code,phone_number=phone_number) #mijoz kontrolleri
 logging.basicConfig(level=logging.INFO) #Bo'layotgan holatlar haqida
 
 
