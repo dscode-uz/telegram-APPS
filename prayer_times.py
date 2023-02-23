@@ -18,16 +18,20 @@ async def main(message:types.Message):
             import time
             today=time.localtime().tm_mday
             response=await resp.json()
-            data=response["data"][today-1]["timings"]
-            await message.answer(data)
-            answer=f"🔷Quyosh chiqishi----⏱{data['Sunrise']}\n" \
-                   f"🔷Peshin------------------⏱{data['Dhuhr']}\n" \
-                   f"🔷Asr-----------------------⏱{data['Asr']}\n" \
-                   f"🔷Quyosh botishi-----⏱{data['Sunset']}\n" \
-                   f"🔷Yarim tun-------------⏱{data['Midnight']}"
-            await message.answer(answer)
+            try:
+                data=response["data"][today-1]["timings"]
+                answer=f"🔷Quyosh chiqishi----⏱{data['Sunrise']}\n" \
+                       f"🔷Peshin------------------⏱{data['Dhuhr']}\n" \
+                       f"🔷Asr-----------------------⏱{data['Asr']}\n" \
+                       f"🔷Quyosh botishi-----⏱{data['Sunset']}\n" \
+                       f"🔷Yarim tun-------------⏱{data['Midnight']}"
+                await message.answer(answer)
+            except:
+                await message.answer("Xato joy nomi")
 @dp.message_handler()
 async def send_welcome(message: types.Message):
+    if message.text=="/start":
+        await message.reply("Shahringizni kiriting")
     await main(message)
 
 executor.start_polling(dp, skip_updates=True)
